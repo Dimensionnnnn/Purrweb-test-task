@@ -1,0 +1,112 @@
+@import url(../main.css);
+
+.container:has(.influencer__main) {
+    align-items: center;
+}
+
+.influencer__main {
+    padding-top: 51px;
+    display: flex;
+    flex-direction: column;
+
+    max-width: 343px;
+
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.influencer__main > p {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.influencer__main-images {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    position: relative;
+}
+
+.main__influencer-image-mobile {
+    padding-top: 100px;
+    width: 90%;
+    height: 90%;
+}
+
+.main__influencer-image-desktop {
+    display: none;
+}
+
+.main__influencer-description > br {
+    display: none;
+}
+
+.main__influencer-button {
+    padding: 16px 30px;
+    border-radius: 16px;
+    background-color: var(--color-primary-01);
+
+    color: var(--color-white);
+    font-family: var(--font-family-outfit);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .container:has(.influencer__main) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: initial;
+    }
+
+    .influencer__main {
+        padding-top: 80px;
+        max-width: 35vw;
+        align-items: start;
+    }
+
+    .main__influencer-image-mobile {
+        display: none;
+    }
+
+    .main__influencer-image-desktop {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+
+        padding-top: 70px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .main__influencer-image-desktop {
+        width: 426px;
+        height: 380px;
+    }
+
+    .influencer__main {
+        padding-top: 80px;
+        max-width: 471px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .main__influencer-image-desktop {
+        width: 595px;
+        height: 529px;
+    }
+
+    .influencer__main {
+        max-width: 671px;
+        padding-left: 7vw;
+    }
+
+    .main__description > br {
+        display: block;
+    }
+}

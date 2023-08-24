@@ -1,0 +1,143 @@
+@import url(../main.css);
+
+.header { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.header > .container {
+    justify-content: space-between;
+}
+
+.header__state {
+    background-color: var(--color-secondary-02);
+}
+
+.header__state button:last-of-type {
+    margin-left: -5px;
+}
+
+.header__state-button {
+    background-color: transparent;
+    border: none;
+    padding: 9px 40px;
+    border-radius: 20px 20px 0 0;
+
+    font-family: var(--font-family-outfit);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    font-style: normal;
+
+    text-align: center;
+
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.header__state-button:active,
+.header__state-button:focus,
+.header__state-button:hover {
+    background-color: var(--color-grayscale-01);
+    color: var(--color-white);
+}       
+
+.header__main {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--color-grayscale-01);
+}
+
+.header__main > * {
+    padding-top: 2vh;
+    padding-bottom: 2.5vh;
+}
+
+.header__button-text {
+    display: none;
+}
+
+.header__main > .b-global__logo {
+    padding-left: 4vw;
+}
+
+.header__logo-title {
+    padding-left: 3px;
+
+    color: var(--color-white);
+    font-family: var(--font-family-outfit);
+    font-size: 29.6px;
+    font-weight: 600;
+    line-height: 13.6px;
+    text-transform: lowercase;
+}
+
+.header__state-menu {
+    display: inline-block;
+    background-color: transparent;
+
+    cursor: none;
+    position: relative;
+
+    width: 24px;
+    margin-right: 4vw;
+
+    font-size: 0;
+    color: transparent; 
+}
+
+.header .main__button {
+    display: none;
+}
+
+.header__menu-line {
+    position: absolute;
+
+    top: 2vh;
+    left: 0;
+
+    width: 100%;
+    background-color: var(--color-white);
+    height: 2px;
+    border-radius: 8px;
+}
+
+.header__menu-line:nth-child(2) {
+    margin-top: 1vh;
+}
+
+.header__menu-line:nth-of-type(3) {
+    margin-top: 2vh;
+}
+
+@media (min-width: 500px) {
+    .header > .container {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .header__state {
+        padding-left: 5vw;
+    }
+
+    .header__state-menu > * {
+        display: none;
+    }
+
+    .header__logo {
+        padding-left: 6vw;
+    }
+
+    .header__state-menu {
+        display: none;
+    }
+
+    .header .main__button {
+        display: block;
+        margin-right: 3vw;
+    }
+}

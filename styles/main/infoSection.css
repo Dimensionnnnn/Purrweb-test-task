@@ -1,0 +1,241 @@
+@import url(../main.css);
+
+.main__info-container {
+    padding: 80px 16px 80px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main__info-container .main__subdescription {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.main__info-container .main__subdescription span::before {
+    left: -10px;
+}
+
+.info__block-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 40px;
+}
+
+.info__block {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--color-grayscale-02);
+    border-radius: 20px;
+    gap: 5px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.info__block > :not(img) .images__container {
+    color: var(--color-black);
+    padding-right: 20px;
+}
+
+.info__block br {
+    display: none;
+}
+
+.block-1 > img:first-child {
+    display: none;
+    max-width: 318px;
+}
+
+.block-1 > img:last-child {
+    max-width: 343px;
+    max-height: 193px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.block-3 > img {
+    max-width: 202px;
+    max-height: 83px;
+    margin-left: auto;
+    margin-top: auto;
+}
+
+.block-4 > img {
+    max-width: 143px;
+    margin-left: auto;
+}
+
+.images__container {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin-bottom: auto;
+    height: 15vh;
+}
+
+.images__container > * {
+    position: absolute;
+    bottom: 0;
+}
+
+.images__container > :nth-child(1) {
+    left: 10px;
+}
+
+.images__container > :nth-child(2) {
+    left: 135px;
+}
+
+.images__container > :nth-child(3) {
+    right: 0;
+}
+
+.info__block-text {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+.info__block-text p {
+    padding-top: 16px;
+}
+
+.info__block-text > * {
+    color: var(--color-black);
+}
+
+.info__block > .main__subcaption {
+    padding-top: 20px;
+}
+
+.info__block {
+    transition: transform 0.5s ease;
+}
+
+.info__block:hover {
+    transform: scale(1.03);
+}
+
+@media (min-width: 768px) {
+    .main__info-container {
+        padding: 100px 70px 100px 70px;
+    }
+
+    .info__block br {
+        display: block;
+    }
+
+    .info__block-text {
+        padding-top: 40px;
+    }
+
+    .info__block-text p {
+        padding-top: 20px;
+    }
+
+    .info__block-container {
+        display: grid;
+        grid-auto-rows: auto;
+        grid-template-columns: 0.425fr .15fr 0.425fr;
+
+        align-items: initial;
+        justify-content: initial;
+    
+        min-width: 0;
+        gap: 20px;
+    
+        padding-top: 70px;
+    }
+
+    .info__block:nth-child(2n + 2) {
+        grid-column: 2 / 5;
+    }
+    
+    .info__block:nth-child(4n + 1) {
+        grid-column: 1 / 3;
+    }
+    
+    .info__block:nth-child(4n + 2) {
+        grid-column: 3 / 5;
+    }
+
+    .block-4 > img {
+        max-width: 210px;
+        height: 185px;
+        margin-left: auto;
+        padding-top: 31px;
+        padding-right: 23px;
+    }
+
+    .images__container {
+        height: 100%;
+    }
+}
+
+@media (min-width: 1024px) {        
+    .block-1 > img:first-child {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .main__info-container > .main__caption {
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 71.76px;
+    }
+
+    .info__block {
+        flex-direction: row;
+    }
+
+    .block-1 > img:last-child {
+        display: none;
+    }
+
+    .block-1 > img:first-child {
+        display: block;
+        height: auto;
+        width: 50%;
+        border-radius: 20px;
+    }
+
+    .images__container {
+        width: 10vw;
+    }
+
+    .images__container > :nth-child(1) {
+        right: 403px;
+        left: initial;
+    }
+    
+    .images__container > :nth-child(2) {
+        right: 60px;
+        left: initial;
+    }
+    
+    .images__container > :nth-child(3) {
+        top: 115px;
+    }
+
+    .block-3 > img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    .block-4 > img {
+        height: 301px;
+        padding-top: 61px;
+        padding-right: 43px;
+    }
+
+    .info__block-text {
+        min-width: 364px;
+    }
+}

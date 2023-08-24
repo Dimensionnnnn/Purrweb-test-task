@@ -1,0 +1,145 @@
+@import url(../styles/main.css);
+
+.modal {
+    position: fixed;
+    display: none;
+    justify-content: center;
+
+    max-width: 418px;
+
+    width: 80%;
+    height: auto;
+
+    z-index: 3;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 20px;
+
+    padding: 20px 16px;
+
+    background-color: var(--color-white);
+}
+
+.modal__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.--hide-content {
+    display: none;
+}
+
+.modal__content > :not(.input-wrapper) {
+    margin-top: 20px;
+}
+
+.modal__close {
+    position: absolute;
+    right: 16px;
+    top: 8px;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.input-wrapper label {
+    font-family: var(--font-family-outfit);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.input-wrapper input {
+    padding: 10px 16px;
+    border: 1px solid var(--color-grayscale-05);
+    background-color: transparent;
+    border-radius: 14px;
+    height: 20px;
+}
+
+.input-wrapper input:focus {
+    outline: 2px solid var(--color-grayscale-04);
+}
+
+.input-wrapper input::placeholder {
+    color: var(--color-grayscale-06);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    overflow: hidden;
+}
+
+.input-error__field {
+    display: none;
+    color: var(--additional-02);
+    font-family: var(--font-family-outfit);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.input-wrapper:not(:first-child) {
+    padding-top: 10px;
+}
+
+.caption-wrapper {
+    font-family: var(--font-family-outfit);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 19.6px;
+}
+
+.caption-wrapper a {
+    color: var(--color-primary-01);
+    text-decoration-line: underline;
+}
+
+.modal-error__field {
+    display: none;
+    color: var(--additional-02);
+    font-family: var(--font-family-outfit);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.main__button.button-disabled {
+    background-color: var(--color-grayscale-04);
+}
+
+.modal__submit {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    max-width: 345px;
+}
+
+.modal__submit * {
+    width: 100%;
+}
+
+.modal__submit .main__subdescription {
+    color: var(--color-primary-02);
+}
+
+.--show-submit {
+    display: flex;
+}
+
+.modal-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}

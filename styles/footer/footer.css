@@ -1,0 +1,129 @@
+@import url(../main.css);
+
+.b-footer {
+    padding: 20px 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+
+    gap: 40px;
+}
+
+ul {
+    font-family: var(--font-family-outfit);
+}
+
+.b-footer__ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.b-footer__li-link {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--color-white);
+}
+
+.b-footer__store-button {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.b-footer__store-button > button {
+    background-color: transparent;
+    width: 194px;
+    height: 57px;
+}
+
+.b-footer__appstore-button {
+    background-image: url(../../source/appstore.svg);
+}
+
+.b-footer__googleplay-button {
+    background-image: url(../../source/googleplay.svg);
+}
+
+.b-footer__links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.b-footer__line {
+    border: 2px solid var(--color-grey);
+}
+
+.b-footer__links-caption,
+.b-footer__links-elem {
+    font-family: var(--font-family-outfit);
+    color: var(--color-grayscale-04);
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.b-footer__links-caption {
+    line-height: 21px;
+}
+
+.b-footer__links-elem {
+    text-decoration-line: underline;
+    line-height: 19.6px;
+}
+
+.b-footer__ul-links {
+    display: none;
+}
+
+@media (min-width: 500px) {
+    .b-footer {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .b-footer__ul {
+        flex-direction: row;
+    }
+
+    .b-footer__ul > :nth-child(n + 3) {
+        display: none;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .b-footer {
+        padding: 40px 60px 20px 60px;
+        gap: 30px;
+    }
+
+    .b-footer__store-button {
+        flex-direction: row;
+    }
+
+    .b-footer__links-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1024px) {
+    .b-footer__ul-links {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .b-footer {
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,85 @@
+@import url(../main.css);
+
+.container:has(.main__data) {
+    align-items: start;
+    background-color: var(--color-primary-01);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.container:has(.main__data) > :not(:first-child) {
+    padding-top: 40px;
+}
+
+.main__data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin-left: 16px;
+}
+
+.main__percent-description {
+    color: var(--color-white);
+    font-family: var(--font-family-outfit);
+    font-size: 20px;
+    font-style: normal;
+    line-height: normal;
+}
+
+.main__percent-description br {
+    display: none;
+}
+
+@media (min-width: 500px) {
+    .container:has(.main__data) {
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .container:has(.main__data) {
+        flex-direction: row;
+    }
+
+    .container:has(.main__data) > :not(:first-child) {
+        padding-top: 0;
+        padding-left: 100px;
+    }
+
+    .main__data {
+        flex-direction: column;
+        align-items: start;
+        gap: 16px;
+    }
+
+    .main__data > .main__caption {
+        font-size: 64px;
+        line-height: 67.84px;
+    }
+
+    .main__percent-description {
+        font-size: 24px;
+        line-height: 28.8px;
+    }
+
+    .main__percent-description br {
+        display: block;
+    }
+}
+
+@media (min-width: 1920px) {
+    .container:has(.main__data) > :not(:first-child) {
+        padding-left: 200px;
+    }
+
+    .main__data > .main__caption {
+        font-size: 78px;
+        line-height: normal;
+    }
+
+    .main__percent-description {
+        font-size: 28px;
+        line-height: 32.8px;
+    }
+}

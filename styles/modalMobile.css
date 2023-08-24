@@ -1,0 +1,33 @@
+.modal-mobile {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-grayscale-01);
+}
+
+.modal-mobile__close {
+    position: relative;
+    display: flex;
+    justify-content: end;
+    padding-top: 15px;
+    padding-right: 16px;
+}
+
+.modal-mobile > button {
+    margin-top: 125px;
+}
+
+.modal-mobile > ul {
+    padding-top: 177px;
+}
+
+.modal-mobile > :not(a) {
+    margin-left: 16px;
+    margin-right: 16px;
+}

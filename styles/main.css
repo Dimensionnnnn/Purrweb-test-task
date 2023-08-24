@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+:root {
+    --font-family-outfit: 'Outfit', sans-serif;
+
+    --color-secondary-01: #2FDBBC;
+    --color-secondary-02: #FFAA4C;
+
+    --additional-02: #EC1211;
+
+    --color-grayscale-01: #181818;
+    --color-grayscale-02: #F5F5F5;
+    --color-grayscale-03: #CFCFCF;
+    --color-grayscale-04: #B9B9B9;
+    --color-grayscale-05: #F1F1F1;
+    --color-grayscale-06: #A7A7A7;
+
+    --color-primary-01: #954CED;
+    --color-primary-02: #A64CED;
+    --color-primary-03: #444444;
+    
+    --color-white: #FFF;
+    --color-black: #000;
+    --color-grey: #444;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+ul {
+    list-style: none;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.2);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.--show-overlay {
+    display: block;
+}
+
+.--show-modal {
+    display: flex;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    min-width: 375px;
+    max-width: 500px;
+
+    background-color: var(--color-grayscale-01);
+
+    width: 100%;
+}
+
+.main__caption {
+    color: var(--color-white);
+    font-feature-settings: 'liga' off;
+    font-family: var(--font-family-outfit);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42.4px;
+}
+
+.main__description {
+    color: var(--color-white);
+    font-family: var(--font-family-outfit);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.main__button {
+    padding: 16px 30px;
+    border-radius: 16px;
+
+    background-color: var(--color-primary-01);
+    color: var(--color-white);
+
+    font-family: var(--font-family-outfit);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    cursor: pointer;
+}
+
+.b-global__logo {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+@media (min-width: 500px) {
+    .container {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .main__caption {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 50.88px;
+    }
+}
+
+@media (min-width: 768px) { 
+    .main__caption {
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 71.76px;
+    }
+
+    .main__description {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .main__caption {
+        font-size: 96px;
+        font-weight: 700;
+        line-height: 101.76px;
+    }
+
+    .main__description {
+        line-height: 28.8px;
+    }
+}
